@@ -8,7 +8,7 @@
   },
   "package": {
     "productName": "leetCoder",
-    "version": "0.0.0"
+    "version": "0.0.1"
   },
   "tauri": {
     "allowlist": {
@@ -16,6 +16,15 @@
       "shell": {
         "all": false,
         "open": true
+      },
+      "window": {
+        "all": false,
+        "close": true,
+        "maximize": true,
+        "minimize": true,
+        "startDragging": true,
+        "unmaximize": true,
+        "unminimize": true
       }
     },
     "bundle": {
@@ -35,11 +44,13 @@
     },
     "windows": [
       {
-        "fullscreen": false,
-        "resizable": true,
-        "title": "leetCoder",
-        "width": 800,
-        "height": 600
+        "decorations": false,
+        "width": 900,
+        "height": 900,
+        "minHeight": 400,
+        "minWidth": 400,
+        "transparent": true,
+        "center": true
       }
     ]
   }

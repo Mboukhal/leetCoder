@@ -1,0 +1,83 @@
+.title-bar{
+  position: fixed;
+  display: flex;
+  width: 100vw;
+  height: 30px;
+  justify-content: space-between;
+  background-color: #444444;
+}
+
+.tb-box  {
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+}
+
+.tb-box div {
+  position: relative;
+  float: left;
+  width: 30px;
+  height: 30px;
+}
+
+.title-box {
+  position: relative;
+  /* display: flex; */
+  top: 10;
+  right: 30;
+  
+}
+
+.tb-box div:before,
+.tb-box div:after {
+  top: 30%;
+  right: 30%;
+  bottom: 30%;
+  left: 30%;
+  content: " ";
+  position: absolute;
+  border-color: #9b9a9a;
+  border-style: solid;
+  border-width: 0 0 2px 0;
+}
+
+.tb-box .minimize:before {
+  border-bottom-width: 2px;
+}
+
+.tb-box .maximize:before {
+  border-width: 1px 1px 2px 1px;
+}
+
+.tb-box .close:before,
+.tb-box .close:after {
+  bottom: 50%;
+  top: 50%;
+}
+
+.tb-box .close:before {
+  transform: rotate(45deg);
+}
+
+.tb-box .close:after {
+  transform: rotate(-45deg);
+}
+
+.tb-box div:hover {
+  background-color: #696969;
+}
+
+.tb-box .close:hover {
+  background-color: #ed3535;
+}
+
+.tb-box div:hover:after,
+.tb-box div:hover:before {
+  border-color: #333333;
+}
+
+.tb-box .close:hover:after,
+.tb-box .close:hover:before {
+  border-color: #565656;
+}
